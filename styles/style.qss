@@ -1,0 +1,404 @@
+/* =============================================================
+   styles/style.qss
+   Styling QSS eksternal untuk Aplikasi Jurnal Harianku
+   Nama  : Yudhi Fajar Pratama
+   NIM   : F1D02310142
+   ============================================================= */
+
+/* ── Global ── */
+QMainWindow, QWidget {
+    background-color: #F7F3EE;
+    font-family: "Segoe UI", "Arial", sans-serif;
+    font-size: 13px;
+    color: #2C2416;
+}
+
+QDialog {
+    background-color: #FEFCF9;
+}
+
+/* ── Header ── */
+#headerWidget {
+    background: qlineargradient(
+        x1:0, y1:0, x2:1, y2:0,
+        stop:0 #3D2B1F,
+        stop:1 #7B4F2E
+    );
+    border-bottom: 3px solid #C4822A;
+}
+
+#appTitle {
+    font-size: 22px;
+    font-weight: bold;
+    color: #F5DEB3;
+    letter-spacing: 1px;
+}
+
+#appTagline {
+    font-size: 11px;
+    color: #C4A882;
+    font-style: italic;
+}
+
+#labelNama {
+    font-size: 12px;
+    color: #F5DEB3;
+    font-weight: bold;
+    text-align: right;
+}
+
+#labelNIM {
+    font-size: 11px;
+    color: #C4A882;
+    text-align: right;
+}
+
+/* ── Toolbar ── */
+#toolbarWidget {
+    background-color: #EDE5DA;
+    border-bottom: 1px solid #D4C5B0;
+}
+
+/* ── Search & Filter Fields ── */
+#searchField, #filterCombo {
+    background-color: #FFFFFF;
+    border: 1.5px solid #C4A882;
+    border-radius: 6px;
+    padding: 6px 10px;
+    color: #2C2416;
+    font-size: 12px;
+}
+
+#searchField:focus {
+    border-color: #7B4F2E;
+    background-color: #FFFEF9;
+}
+
+#filterCombo::drop-down {
+    border: none;
+    padding-right: 6px;
+}
+
+/* ── Tombol ── */
+QPushButton {
+    border-radius: 6px;
+    padding: 7px 16px;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+#btnPrimary {
+    background-color: #7B4F2E;
+    color: #FFFFFF;
+}
+
+#btnPrimary:hover {
+    background-color: #9B6540;
+}
+
+#btnPrimary:pressed {
+    background-color: #5C3A20;
+}
+
+#btnSecondary {
+    background-color: #C4822A;
+    color: #FFFFFF;
+}
+
+#btnSecondary:hover {
+    background-color: #D9952E;
+}
+
+#btnSecondary:pressed {
+    background-color: #A06B20;
+}
+
+#btnDanger {
+    background-color: #B94040;
+    color: #FFFFFF;
+}
+
+#btnDanger:hover {
+    background-color: #D05050;
+}
+
+#btnDanger:pressed {
+    background-color: #8B2A2A;
+}
+
+/* Dialog buttons */
+#btnSimpan {
+    background-color: #7B4F2E;
+    color: #FFFFFF;
+    padding: 8px 24px;
+    font-size: 13px;
+    border-radius: 8px;
+}
+
+#btnSimpan:hover {
+    background-color: #9B6540;
+}
+
+#btnBatal {
+    background-color: #C0B8AF;
+    color: #2C2416;
+    padding: 8px 18px;
+    border-radius: 8px;
+}
+
+#btnBatal:hover {
+    background-color: #A09890;
+}
+
+/* ── Tabel ── */
+#mainTable {
+    background-color: #FFFFFF;
+    alternate-background-color: #FAF5EE;
+    border: none;
+    gridline-color: #E8DDD0;
+    selection-background-color: #C4822A;
+    selection-color: #FFFFFF;
+}
+
+QHeaderView::section {
+    background-color: #3D2B1F;
+    color: #F5DEB3;
+    padding: 8px;
+    font-weight: bold;
+    font-size: 12px;
+    border: none;
+    border-right: 1px solid #5C3A20;
+}
+
+QHeaderView::section:last {
+    border-right: none;
+}
+
+QTableWidget::item {
+    padding: 6px 8px;
+    border-bottom: 1px solid #F0E8DC;
+}
+
+QTableWidget::item:selected {
+    background-color: #C4822A;
+    color: #FFFFFF;
+}
+
+/* ── Preview Panel ── */
+#previewPanel {
+    background-color: #FEFCF9;
+    border-left: 2px solid #D4C5B0;
+}
+
+#previewTitle {
+    font-size: 13px;
+    font-weight: bold;
+    color: #7B4F2E;
+}
+
+#previewJudul {
+    font-size: 16px;
+    font-weight: bold;
+    color: #2C2416;
+    padding: 4px 0;
+}
+
+#previewMeta {
+    font-size: 11px;
+    color: #8B7355;
+    font-style: italic;
+}
+
+#previewIsi {
+    background-color: #FEFCF9;
+    border: 1.5px solid #E0D5C5;
+    border-radius: 8px;
+    padding: 10px;
+    color: #2C2416;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* ── Statistik Bar ── */
+#statsBar {
+    background-color: #3D2B1F;
+    border-top: 2px solid #C4822A;
+}
+
+#statsLabel {
+    color: #C4A882;
+    font-size: 11px;
+}
+
+/* ── Form Input di Dialog ── */
+#dialogTitle {
+    font-size: 18px;
+    font-weight: bold;
+    color: #3D2B1F;
+}
+
+#inputField {
+    background-color: #FFFFFF;
+    border: 1.5px solid #C4A882;
+    border-radius: 6px;
+    padding: 6px 10px;
+    color: #2C2416;
+    font-size: 13px;
+    min-height: 28px;
+}
+
+#inputField:focus {
+    border-color: #7B4F2E;
+    background-color: #FFFEF9;
+}
+
+QComboBox#inputField::drop-down {
+    border: none;
+}
+
+#inputIsi {
+    background-color: #FFFFFF;
+    border: 1.5px solid #C4A882;
+    border-radius: 6px;
+    padding: 8px;
+    color: #2C2416;
+    font-size: 13px;
+}
+
+#inputIsi:focus {
+    border-color: #7B4F2E;
+}
+
+/* ── Divider ── */
+#divider {
+    color: #D4C5B0;
+    border: none;
+    border-top: 1px solid #D4C5B0;
+    margin: 4px 0;
+}
+
+/* ── Menu Bar ── */
+QMenuBar {
+    background-color: #2C2416;
+    color: #F5DEB3;
+    padding: 2px;
+    font-size: 12px;
+}
+
+QMenuBar::item {
+    background: transparent;
+    padding: 5px 12px;
+    border-radius: 4px;
+}
+
+QMenuBar::item:selected {
+    background-color: #7B4F2E;
+}
+
+QMenu {
+    background-color: #2C2416;
+    color: #F5DEB3;
+    border: 1px solid #7B4F2E;
+    border-radius: 6px;
+    padding: 4px;
+}
+
+QMenu::item {
+    padding: 6px 20px;
+    border-radius: 4px;
+}
+
+QMenu::item:selected {
+    background-color: #7B4F2E;
+}
+
+QMenu::separator {
+    height: 1px;
+    background-color: #5C3A20;
+    margin: 4px 10px;
+}
+
+/* ── Status Bar ── */
+QStatusBar {
+    background-color: #2C2416;
+    color: #C4A882;
+    font-size: 11px;
+    padding: 3px 8px;
+}
+
+/* ── Scrollbars ── */
+QScrollBar:vertical {
+    background: #EDE5DA;
+    width: 10px;
+    border-radius: 5px;
+}
+
+QScrollBar::handle:vertical {
+    background: #C4A882;
+    border-radius: 5px;
+    min-height: 30px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #7B4F2E;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0;
+}
+
+QScrollBar:horizontal {
+    background: #EDE5DA;
+    height: 10px;
+    border-radius: 5px;
+}
+
+QScrollBar::handle:horizontal {
+    background: #C4A882;
+    border-radius: 5px;
+    min-width: 30px;
+}
+
+/* ── Form Labels ── */
+QLabel {
+    color: #2C2416;
+}
+
+/* ── Date Edit & Combo dalam Dialog ── */
+QDateEdit {
+    background-color: #FFFFFF;
+    border: 1.5px solid #C4A882;
+    border-radius: 6px;
+    padding: 6px 10px;
+    color: #2C2416;
+    font-size: 13px;
+    min-height: 28px;
+}
+
+QDateEdit:focus {
+    border-color: #7B4F2E;
+}
+
+QDateEdit::drop-down {
+    border: none;
+    padding-right: 4px;
+}
+
+/* ── Calendar Popup ── */
+QCalendarWidget QWidget {
+    background-color: #FEFCF9;
+    color: #2C2416;
+}
+
+QCalendarWidget QAbstractItemView {
+    selection-background-color: #7B4F2E;
+    selection-color: white;
+}
+
+/* ── Splitter handle ── */
+QSplitter::handle {
+    background-color: #D4C5B0;
+    width: 2px;
+}
